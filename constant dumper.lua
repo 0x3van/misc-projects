@@ -1,6 +1,5 @@
 return "wow you hooked an opcode???? op man! Now suck my dick"
-local 0x1e9 = Instance.new("metatable", metatablemethods)
-0x1e9.add = {
+local table = setmetatable(__div, "mtb") {  
  ["RowFirst"]   "f2 5f 32 eb 2a 16 59 68 a4 06 3f 0c 44 62 3e d5 "
  ["RowSecond"]   "60 9e d3 da fd 7f ed e9 dd cc 3a f8 25 6b 23 7a "
  ["RowThird"]   "4f a5 41 a2 0e c2 3e 84 dd cb 98 41 58 8e 94 73 "
@@ -22,8 +21,8 @@ local 0x1e9 = Instance.new("metatable", metatablemethods)
  ["RowNineteenth"]   "4d c7 7d 7d 46 77 20 26 03 41 02 b2 "
 }
 
-for i,v in pairs(0x1e9) do 
-  if {__index}:GetDescendants() = {__value} then
+for i,v in pairs(table) do 
+  if __index:GetDescendants() = __value then
     print(v)
     print(i)
   else
