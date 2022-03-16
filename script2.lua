@@ -30,7 +30,7 @@ function fire()
     req = {
         "Content Type" "application/json"
     }
-   res = httprequest(mtb=url('https://api.stemplayer.com'), [req], {__index})
+   res = httprequest(url=url('https://api.stemplayer.com'), [req], params=__index)
 until httprequest.EventFired == true 
     print("url: " res)
 end
